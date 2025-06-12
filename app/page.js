@@ -28,7 +28,8 @@ const downloadCSV = (data, filename = 'export.csv') => {
     if (!data || data.length === 0) return;
     const headers = Object.keys(data[0]);
     const csvRows = [
-        headers.join(&apos;,&apos;),
+        // Correct code
+headers.join(','),
         ...data.map(row => 
             headers.map(header => {
                 let value = row[header];
